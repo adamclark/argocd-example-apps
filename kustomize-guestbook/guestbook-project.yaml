@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Template
+metadata:
+  name: guestbook-project-template
+objects:
+  - apiVersion: project.openshift.io/v1
+    kind: Project
+    metadata:
+      name: kustomize-guestbook
+      annotations:
+        argocd.argoproj.io/hook: PreSync

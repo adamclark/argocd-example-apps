@@ -1,6 +1,12 @@
-apiVersion: project.openshift.io/v1
-kind: Project
+---
+apiVersion: v1
+kind: Template
 metadata:
-  name: guestbook
-  annotations:
-    argocd.argoproj.io/hook: PreSync
+  name: guestbook-project-template
+objects:
+  - apiVersion: project.openshift.io/v1
+    kind: Project
+    metadata:
+      name: guestbook-sit
+      annotations:
+        argocd.argoproj.io/hook: PreSync
